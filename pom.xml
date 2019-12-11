@@ -2,14 +2,14 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>talamonso.net</groupId>
 	<artifactId>omapi-dhcp</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>omapi dhcp</name>
 	<description>java interface to omapi</description>
 
 	<scm>
 		<connection>scm:git:https://github.com/BabisK/omapi-dhcp.git</connection>
 		<developerConnection>scm:git:https://github.com/BabisK/omapi-dhcp.git</developerConnection>
-		<tag>HEAD</tag>
+		<tag>v0.0.1</tag>
 		<url>https://github.com/BabisK/omapi-dhcp.git</url>
 	</scm>
 
