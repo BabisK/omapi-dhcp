@@ -6,6 +6,13 @@
 	<name>omapi dhcp</name>
 	<description>java interface to omapi</description>
 
+	<scm>
+		<connection>scm:git:https://github.com/BabisK/omapi-dhcp.git</connection>
+		<developerConnection>scm:git:https://github.com/BabisK/omapi-dhcp.git</developerConnection>
+		<tag>HEAD</tag>
+		<url>https://github.com/BabisK/omapi-dhcp.git</url>
+	</scm>
+
 	<build>
 		<pluginManagement>
 			<plugins>
@@ -27,4 +34,16 @@
 			</plugins>
 		</pluginManagement>
 	</build>			
+	<distributionManagement>
+        <repository>
+            <id>${repo.id}</id>
+            <name>${repo.name}</name>
+            <url>${repo.url}</url>
+        </repository>
+        <snapshotRepository>
+            <id>${snaprepo.id}</id>
+            <name>${snaprepo.name}</name>
+            <url>${snaprepo.url}</url>
+        </snapshotRepository>
+    </distributionManagement>
 </project>
