@@ -7,6 +7,7 @@ import java.net.InetAddress;
 import java.net.Socket;
 import java.nio.ByteBuffer;
 
+import java.util.Base64;
 import org.talamonso.OMAPI.Exceptions.OmapiConnectionException;
 import org.talamonso.OMAPI.Exceptions.OmapiInitException;
 import org.talamonso.OMAPI.Objects.Authenticator;
@@ -139,7 +140,7 @@ public class Connection {
 				throw new OmapiInitException("Name of the Key exceeds 16 byte");
 			}
 			this.keyName = name;
-			this.key = new sun.misc.BASE64Decoder().decodeBuffer(k);
+			this.key = Base64.getDecoder().decode(k);
 			Authenticator a = new Authenticator(this, name);
 			a.send(Message.OPEN);
 			this.useAuth = true;
