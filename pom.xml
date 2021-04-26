@@ -5,6 +5,7 @@
 	<version>0.0.3-SNAPSHOT</version>
 	<name>omapi dhcp</name>
 	<description>java interface to omapi</description>
+	<packaging>bundle</packaging>
 
 	<scm>
 		<connection>scm:git:https://github.com/BabisK/omapi-dhcp.git</connection>
@@ -25,25 +26,15 @@
 						<target>11</target>
 					</configuration>
 				</plugin>
-
-				<!-- Create library JAR: mvn compile jar:jar -->
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-jar-plugin</artifactId>
-				</plugin>
 			</plugins>
 		</pluginManagement>
-	</build>			
-	<distributionManagement>
-        <repository>
-            <id>${repo.id}</id>
-            <name>${repo.name}</name>
-            <url>${repo.url}</url>
-        </repository>
-        <snapshotRepository>
-            <id>${snaprepo.id}</id>
-            <name>${snaprepo.name}</name>
-            <url>${snaprepo.url}</url>
-        </snapshotRepository>
-    </distributionManagement>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>maven-bundle-plugin</artifactId>
+				<version>4.2.1</version>
+				<extensions>true</extensions>
+			</plugin>
+		</plugins>
+	</build>
 </project>
